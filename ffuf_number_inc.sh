@@ -4,20 +4,20 @@
 # required enumerating all account IDs to find the superadmin account. I used
 # this script with mitmproxy to filter out by response body.
 
-##############################################################################
+##################################################################################
 # Script name: ffuf_number_inc.sh
 # Description: Generate a wordlist from incremental numbers
 # Author:      Marco Lumia
 # Email:       lumiamarco@gmail.com
-############################################################################## 
+##################################################################################
 #
 # Usage example:
 # Test parameter values from a generated list of iterated numbers from 1-1000
 # for https://example.org/account?id=FUZZ
 #
-# ./ffuf_number_inc.sh 1-1000 | ffuf -w - -u https://example.org/account?id=FUZZ
+# ./ffuf_number_inc.sh 1-1000 | ffuf -w - -u 'https://example.org/account?id=FUZZ'
 #
-##############################################################################
+##################################################################################
 
 if [ $# -eq 0 ]; then
     printf "Usage: %s 1-1000\n" "$0" >&2
