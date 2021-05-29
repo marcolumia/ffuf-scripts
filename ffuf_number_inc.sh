@@ -15,7 +15,7 @@
 # Test parameter values from a generated list of iterated numbers from 1-1000
 # for https://example.org/account?id=FUZZ
 #
-# ./ffuf_iterator.sh 1-1000 | ffuf -w - -u https://example.org/account?id=FUZZ
+# ./ffuf_number_inc.sh 1-1000 | ffuf -w - -u https://example.org/account?id=FUZZ
 #
 ##############################################################################
 
